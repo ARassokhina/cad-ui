@@ -21,22 +21,22 @@ export default {
     // Навигация по дереву
     async getChildren(parentId, { page = 1, limit = 50 } = {}) {
         const parent = fsNodes[parentId];
-        if (!parent || parent.type !== 'folder') {
-            return paginate([], page, limit);
-        }
-        const childrenIds = parent.children || [];
-        const children = childrenIds.map(id => {
-            const node = fsNodes[id];
-            // Приводим к формату, который ожидает FileTree:
-            return {
-                id: node.id,
-                name: node.name,
-                type: node.type === 'cabinet' ? 'folder' : node.type, // если cabinets хотите отображать как папки, можно так
-                isOpen: false,
-                children: node.type === 'folder' ? null : undefined // для папок дети подгружаются лениво
-            };
-        });
-        return paginate(children, page, limit);
+
+        const result = (!parent || parent.type !== 'folder')
+            ? []
+            : (parent.children || []).map(id => {
+                const node = fsNodes[id];
+                // Приводим к формату, который ожидает FileTree:
+                return {
+                    id: node.id,
+                    name: node.name,
+                    type: node.type === 'cabinet' ? 'folder' : node.type,
+                    isOpen: false,
+                    children: node.type === 'folder' ? null : undefined
+                };
+            });
+
+        return paginate(result, page, limit);
     },
 
     // Поиск по плоскому списку (pages или sources)
