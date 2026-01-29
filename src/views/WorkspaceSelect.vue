@@ -9,16 +9,16 @@
       <!-- Передаем параметры ветки и контекста в метод select -->
       <div class="ws-card typical" @click="select('typical', 'ROOT_LIBS')">
         <div class="card-icon">📚</div>
-        <h2>Typical Development</h2>
-        <p>Standard libraries, reusable blocks, schemes, and topology elements.</p>
+        <h2>Proto Development</h2>
+        <p>пока не реализовано</p>
         <div class="action-hint">Open Libraries →</div>
       </div>
 
-      <div class="ws-card project" @click="select('project', 'ABC_3')">
+      <div class="ws-card project" @click="select('project', 'project-1')">
         <div class="card-icon">🏗️</div>
         <h2>Project Workspace</h2>
-        <p>Specific project implementation: ABC 1, ABC 2, ABC 3 modules.</p>
-        <div class="action-hint">Enter Project →</div>
+        <p>Кликнем, и сразу попадем в project-1</p>
+        <div class="action-hint">Enter Project 1 →</div>
       </div>
     </div>
 

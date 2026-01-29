@@ -148,7 +148,7 @@ export default {
   padding: 14px 16px;
   border-radius: 8px;
   color: var(--vt-c-text-dark-1);
-  font-family: 'JetBrainsMono', monospace; /* Соответствие системному шрифту */
+  font-family: 'Fira Mono', monospace; /* Соответствие системному шрифту */
   font-size: 14px;
   outline: none;
   transition: all 0.25s ease;

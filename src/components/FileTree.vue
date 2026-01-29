@@ -77,6 +77,7 @@ export default {
   methods: {
     async loadNodes(parentId, page = 1) {
       try {
+        console.log(parentId)
         // Пример вызова API для корневого уровня
         const res = await api.getChildren(parentId, { page });
         this.localNodes = res.items;
