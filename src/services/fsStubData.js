@@ -11,7 +11,7 @@ export const fsNodes = {
     'typical-root': {
         id: 'typical-root',
         type: 'folder',
-        name: 'Typical workspace',
+        name: 'Proto',
         children: []
     },
 

@@ -64,7 +64,8 @@
 </template>
 
 <script>
-/*import { mapActions } from 'vuex';*/
+
+import axios from "axios";
 
 export default {
   name: 'SignIn',
@@ -79,17 +80,16 @@ export default {
     };
   },
   methods: {
- /*   ...mapActions('userModule', {
-      storeLogin: 'login',
-    }),*/
+
     async handleLogin() {
       if (this.loading) return;
       this.loading = true;
       this.alertVisible = false;
 
       try {
-        await this.storeLogin({ username: this.username, password: this.password });
-        this.$router.push('/workspace-select');
+
+        await axios.post( 'http://192.168.4.116'  + ':' + 9000 + '/sec/login', { username: this.username, password: this.password });
+        this.$router.push('/app');
       } catch (error) {
         this.alertMessage = (error.length < 150) ? error : 'Ошибка запроса. Свяжитесь с поддержкой.';
         this.alertVisible = true;
