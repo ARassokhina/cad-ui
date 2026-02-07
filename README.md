@@ -1,6 +1,6 @@
 # cad-ui
 
-This template should help get you started developing with Vue 3 in Vite.
+Демо того, как файловая система (слева) будет отображаться в проекте. Модульный фронтенд-интерфейс для работы с данными, моделирования и визуализации. Инструментальные программы (такие как Editor, Debug, Modeling) будут добавляться.
 
 ## Recommended IDE Setup
 
