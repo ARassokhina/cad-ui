@@ -4,10 +4,10 @@
       <!-- Логотип и заголовок -->
       <div class="logo-section">
         <div class="brand">
-          <img src="@/assets/image/png/logo_fizpribor.png" alt="Fizpribor" class="main-logo" />
+          <img src="@/assets/image/png/logo.png" alt="logo" class="main-logo" />
         </div>
         <div class="divider"></div>
-        <h2>Вход в систему <span>FIMATIC-CAD</span></h2>
+        <h2>Вход в систему <span>(введите любые символы)</span></h2>
       </div>
 
       <form @submit.prevent="handleLogin">
