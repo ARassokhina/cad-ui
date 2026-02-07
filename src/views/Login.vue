@@ -88,7 +88,7 @@ export default {
 
       try {
 
-        await axios.post( 'http://192.168.4.116'  + ':' + 9000 + '/sec/login', { username: this.username, password: this.password });
+        //await axios.post( 'http://192.168.4.116'  + ':' + 9000 + '/sec/login', { username: this.username, password: this.password });
         this.$router.push('/app');
       } catch (error) {
         this.alertMessage = (error.length < 150) ? error : 'Ошибка запроса. Свяжитесь с поддержкой.';
